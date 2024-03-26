@@ -29,11 +29,8 @@ int main(int argc, char *argv[])
     scene.setSceneRect(0,0,800,600);
 
 
-    //Setting brushes
-    QBrush redBrush(Qt::red);
-
     // *******  Create the Player ********
-    QPixmap pixmap1 ("C:/Users/habib/Downloads/ship.png");
+    QPixmap pixmap1 ("E:/Session 05 Game Template/session 5 - game - Exercise/SpaceShip.png");
     pixmap1=pixmap1.scaledToWidth(100);
     pixmap1=pixmap1.scaledToHeight(100);
 
@@ -58,12 +55,14 @@ int main(int argc, char *argv[])
     QObject::connect(time, SIGNAL(timeout()),player,SLOT(createEnemy()));
     time->start(2000);
 
-    //QGraphicsTextItem* score =new QGraphicsTextItem;
-    //score->setFont(QFont("times",16));
-   // score->setPlainText("Score: " +QString::number(0));
-    //score->setPos(500,10);
-    //scene.addItem(score);
-     //view.show();
+    QGraphicsTextItem* score =new QGraphicsTextItem;
+    score->setFont(QFont("times",16));
+    score->setPlainText("Score: " +QString::number(0));
+    score->setDefaultTextColor(Qt::blue);
+    score->setPos(500,10);
+    scene.addItem(score);
+    view.setScene(&scene);
+    view.show();
 
     return a.exec();
 

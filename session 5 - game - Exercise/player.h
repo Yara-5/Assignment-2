@@ -6,8 +6,11 @@
 class Player: public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
+    int scoreValue;
+    QGraphicsTextItem* score;
+
 public:
-    Player();
+    Player(QGraphicsTextItem* score=0);
 public:
     void keyPressEvent(QKeyEvent * event);
 public slots:

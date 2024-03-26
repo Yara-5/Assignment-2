@@ -4,7 +4,7 @@
 #include <QGraphicsScene>
 #include <QDebug>
 #include "enemy.h"
-Player::Player() {
+Player::Player(QGraphicsTextItem* score) {
 
 }
 

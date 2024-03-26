@@ -6,10 +6,8 @@
 class Bullet: public QObject, public QGraphicsRectItem
 {
 private:
-    int scoreValue;
-    QGraphicsTextItem* score;
-
     Q_OBJECT
+
 public:
     Bullet();
 

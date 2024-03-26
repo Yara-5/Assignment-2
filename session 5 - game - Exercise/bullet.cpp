@@ -30,7 +30,7 @@ QList <QGraphicsItem *> colliding_items= collidingItems();
 {
    if(typeid(*(colliding_items[i]))==typeid(Enemy))
             {
-               // scoreValue++;
+          //       scoreValue++;
         //score->setPlainText("Score: " +QString::number(scoreValue));
 
                 scene()->removeItem(colliding_items[i]);

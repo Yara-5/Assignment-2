@@ -3,7 +3,6 @@
 #include <stdlib.h> // rand() -> to generate really large integer
 #include <QTimer>
 #include <QDebug>
-#include "player.h"
 #include <QMessageBox>
 
 Enemy::Enemy() {
@@ -23,28 +22,6 @@ Enemy::Enemy() {
 // Function move: move the enemy downwards untill the end of the scene then remove it and delete it
 void Enemy:: move()
 {
-
-
-        //QList <QGraphicsItem *> colliding_items= collidingItems();
-        //for(int i=0; i<colliding_items.size(); i++)
-        //{
-            //if(typeid(*(colliding_items[i]))==typeid(Player))
-            //{
-
-                    //QMessageBox* box = new QMessageBox();
-
-                //box->setText("Game Over");
-                    //box->show();
-
-                    //QMessageBox::StandardButton reply = QMessageBox::question("GAME OVER","Do you wish to proceed again?", QMessageBox::Yes|QMessageBox::No);
-                //scene()->removeItem(colliding_items[i]);
-                //scene()->removeItem(this);
-                //delete colliding_items[i];
-                //delete this;
-
-
-            //}
-        //}
         setPos(x(),y()+5);
         if(y()+rect().height()>800)
         {
